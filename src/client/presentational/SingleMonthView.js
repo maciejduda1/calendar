@@ -5,5 +5,8 @@ const SingleMonthView = (props) => (
         <div className="col">
             <Month  year={props.chosenYear} month={props.chosenMonth} monthIndex={props.chosenMonthIndex} holidays={staticHolidays(props.chosenYear).concat(movingHolidays(props.chosenYear))} />
         </div>
+        <div className="col">
+            
+        </div>
     </div>
 );
