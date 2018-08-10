@@ -13,7 +13,16 @@ const Calendar = (props) => (
                </span>
                <button className="btn btn-primary ml-2 mr-2" onClick={ () => props.addYear() }>+</button>
             </h1>
-            { months.map((month, index) => <Month key={month} year={props.currentYear} month={month} monthIndex={index} holidays={staticHolidays(props.currentYear).concat(movingHolidays(props.currentYear))} />)} 
+            { months.map((month, index) => <Month 
+                                                key={month} 
+                                                year={props.currentYear} 
+                                                month={month} 
+                                                monthIndex={index} 
+                                                holidays={staticHolidays(props.currentYear).concat(movingHolidays(props.currentYear))}
+                                                selectMonth={(i) => props.selectMonth(i)}
+                                                userLoggedIn={props.userLoggedIn}
+                                                tasks={props.userTasks}
+                                            />)} 
         </div>
     </div>
 );

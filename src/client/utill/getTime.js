@@ -40,8 +40,22 @@ const currentDate = moment(),
            // console.log(e, 'Rok: ', moment([year, 0, 1]).calendar()); //.format('d M YYYY'));
             return easterStart().concat(corpusChristi()).concat(Pentecost());
     },
-    holidayNamesPL = [ 'Nowy Rok, Świętej Bożej Rodzicielki', 'Trzech Króli (Objawienie Pańskie)', 'Święto Pracy', 'Święto Konstytucji 3 Maja', 'Święto Wojska Polskiego, Wniebowzięcie Najświętszej Maryi Panny', 'Wszystkich Świętych', 'Święto Niepodległości', 'Boże Narodzenie (pierwszy dzień)', 'Boże Narodzenie (drugi dzień)', 'Wielkanoc', 'Poniedziałek Wielkanocny', 'Boże Ciało', 'Zesłanie Ducha Świętego'];
+    holidayNamesPL = [ 'Nowy Rok, Świętej Bożej Rodzicielki', 'Trzech Króli (Objawienie Pańskie)', 'Święto Pracy', 'Święto Konstytucji 3 Maja', 'Święto Wojska Polskiego, Wniebowzięcie Najświętszej Maryi Panny', 'Wszystkich Świętych', 'Święto Niepodległości', 'Boże Narodzenie (pierwszy dzień)', 'Boże Narodzenie (drugi dzień)', 'Wielkanoc', 'Poniedziałek Wielkanocny', 'Boże Ciało', 'Zesłanie Ducha Świętego'],
+    allHoliday = (year) => [ 
+        {name: 'Nowy Rok, Świętej Bożej Rodzicielki', date: moment([year, 0, 1]).calendar()},
+        {name: 'Trzech Króli (Objawienie Pańskie)', date:  moment([year, 0, 6]).calendar()},
+        {name: 'Święto Pracy', date: moment([year, 4, 1]).calendar()},
+        {name: 'Święto Konstytucji 3 Maja', date: moment([year, 4, 3]).calendar()},
+        {name: 'Święto Wojska Polskiego, Wniebowzięcie Najświętszej Maryi Panny',date:  moment([year, 7, 15]).calendar()},
+        {name: 'Wszystkich Świętych', date:moment([year, 10, 1]).calendar()},
+        {name: 'Święto Niepodległości', date: moment([year, 10, 11]).calendar()},
+        {name: 'Boże Narodzenie (pierwszy dzień)', date: moment([year, 11, 25]).calendar()},
+        {name: 'Boże Narodzenie (drugi dzień)', date: moment([year, 11, 26]).calendar()},
+        {name: 'Wielkanoc', date: movingHolidays(year)[0]},
+        {name: 'Poniedziałek Wielkanocny', date: movingHolidays(year)[1]},
+        {name: 'Boże Ciało', date: movingHolidays(year)[2] },
+        {name: 'Zesłanie Ducha Świętego', date: movingHolidays(year)[3]} ];
+   
     
     
-    
-export { currentDate, weekdays, weekdaysShort, months, firstDayOfMonth, daysInMonth, staticHolidays, movingHolidays, dayOfWeek, holidayNamesPL };
+export { currentDate, weekdays, weekdaysShort, months, firstDayOfMonth, daysInMonth, staticHolidays, movingHolidays, dayOfWeek, holidayNamesPL, allHoliday };

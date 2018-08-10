@@ -1,7 +1,8 @@
 const ADD_YEAR = 'ADD_YEAR',
     SUBTRACT_YEAR = 'SUBTRACT_YEAR',
     USER_LOGGED_IN = 'USER_LOGGED_IN',
-    USER_LOGGED_OUT = 'USER_LOGGED_OUT';
+    USER_LOGGED_OUT = 'USER_LOGGED_OUT',
+    SELECT_MONTH = 'SELECT_MONTH';
 
 function addYear() {
     return {
@@ -27,5 +28,12 @@ function userLoggedOut() {
     }
 }
 
+function selectMonth(month) {
+    return {
+        type: SELECT_MONTH,
+        selectedMonth: month,
+    }
+}
 
-export { ADD_YEAR, SUBTRACT_YEAR, USER_LOGGED_IN, USER_LOGGED_OUT, addYear, subtractYear, userLoggedIn, userLoggedOut, };
+
+export { ADD_YEAR, SUBTRACT_YEAR, USER_LOGGED_IN, USER_LOGGED_OUT, SELECT_MONTH, addYear, subtractYear, userLoggedIn, userLoggedOut, selectMonth, };

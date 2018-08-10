@@ -4,6 +4,7 @@ import SingleMonthView from '../presentational/SingleMonthView';
 
 const mapStateToProps = (state) => ({
     userLoggedIn: state.userLoginStatus,
+    selectedMonth: state.selectedMonth,
 });
 /*
 const mapDispatchToProps = (dispatch) => ({

@@ -32,6 +32,11 @@
   cursor: pointer;
 }
 
+.btn-shadow {
+  box-shadow: 0 0 1px 5px rgb(153, 212, 15); 
+}
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
