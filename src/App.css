@@ -23,7 +23,8 @@
   font-size: large;
 }
 */
-.prev-month, .next-month {
+.prev-month,
+.next-month {
   color: #333;
 }
 
@@ -33,11 +34,18 @@
 }
 
 .btn-shadow {
-  box-shadow: 0 0 1px 5px rgb(153, 212, 15); 
+  box-shadow: 0 0 1px 5px rgb(153, 212, 15);
 }
 
+.btn-sizing {
+  width: 100%;
+}
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

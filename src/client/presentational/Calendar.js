@@ -13,6 +13,8 @@ const Calendar = (props) => (
                </span>
                <button className="btn btn-primary ml-2 mr-2" onClick={ () => props.addYear() }>+</button>
             </h1>
+        </div>  
+        <div className="row">
             { months.map((month, index) => <Month 
                                                 key={month} 
                                                 year={props.currentYear} 
@@ -22,6 +24,7 @@ const Calendar = (props) => (
                                                 selectMonth={(i) => props.selectMonth(i)}
                                                 userLoggedIn={props.userLoggedIn}
                                                 tasks={props.userTasks}
+                                                col='col-sm-12 col-md-6 col-lg-4 col-xl-3'
                                             />)} 
         </div>
     </div>
